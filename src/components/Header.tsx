@@ -1,6 +1,14 @@
 import { MainContext } from "@/context";
-import { Sun, Moon, User } from "lucide-react";
+import { Sun, Moon, User2 } from "lucide-react";
 import { useContext } from "react";
+
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Button } from "./ui/button";
+import { socials } from "@/data/socials";
 
 const iconSize = 20;
 const iconStyles = "hover:bg-gray-50 p-1 rounded transition";
@@ -27,9 +35,32 @@ const Header = () => {
               <Moon size={iconSize} color="var(--primary)" />
             )}
           </button>
-          <button className={iconStyles}>
-            <User size={iconSize} color="var(--primary)" />
-          </button>
+          <Popover>
+            <PopoverTrigger>
+              <User2 size={30} className={iconStyles} color="var(--primary)" />
+            </PopoverTrigger>
+            <PopoverContent className="bg-[var(--bg-color)] flex flex-col gap-5 w-fit mt-5">
+              <h5 className="text-[var(--text-color)] font-bold">
+                شبکه های اجتماعی
+              </h5>
+              <div className="button-wrapper flex gap-5">
+                {socials.map((icon, idx) => (
+                  <Button key={idx} variant="outline" asChild>
+                    <a
+                      href={icon.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <icon.icon color="var(--text-color)" />
+                      <span className="text-[var(--text-color)] ">
+                        {icon.text}
+                      </span>
+                    </a>
+                  </Button>
+                ))}
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </div>
     </header>
