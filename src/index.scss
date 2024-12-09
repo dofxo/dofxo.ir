@@ -24,3 +24,12 @@ body {
     width: 95vw;
   }
 }
+
+.title {
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
