@@ -1,3 +1,9 @@
+@use "/public/fonts/iransans/stylesheet.scss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "IRANSansX", "tahoma";
+}
