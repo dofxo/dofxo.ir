@@ -10,13 +10,13 @@ import {
 import { Button } from "./ui/button";
 import { socials } from "@/data/socials";
 
-const iconSize = 20;
+const iconSize = 15;
 const iconStyles = "hover:bg-gray-50 p-1 rounded transition";
 
 const Header = () => {
   const { theme, setTheme } = useContext(MainContext);
   return (
-    <header className="p-5 px-20 shadow shadow-[var(--shadow-color)]">
+    <header className="p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
       <div className="container flex items-center justify-between">
         <a href="/" className="text-2xl text-[var(--primary)] font-[SourGummy]">
           {`</dofxo>`}
@@ -37,13 +37,13 @@ const Header = () => {
           </button>
           <Popover>
             <PopoverTrigger>
-              <User2 size={30} className={iconStyles} color="var(--primary)" />
+              <User2 size={25} className={iconStyles} color="var(--primary)" />
             </PopoverTrigger>
-            <PopoverContent className="bg-[var(--bg-color)] flex flex-col gap-5 w-fit mt-5">
+            <PopoverContent className="bg-[var(--bg-color)] flex flex-col ml-5 gap-5">
               <h5 className="text-[var(--text-color)] font-bold">
                 شبکه های اجتماعی
               </h5>
-              <div className="button-wrapper flex gap-5">
+              <div className="button-wrapper flex flex-wrap gap-5">
                 {socials.map((icon, idx) => (
                   <Button key={idx} variant="outline" asChild>
                     <a
