@@ -11,8 +11,8 @@ const App = () => {
 
   return (
     <MainContext.Provider value={{ theme, setTheme }}>
-      <main className="grid gap-[24px]">
-        <Header />
+      <Header />
+      <main className="grid gap-[100px] pb-10">
         <HeroSection />
         <Skills />
       </main>

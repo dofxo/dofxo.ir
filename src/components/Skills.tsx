@@ -14,11 +14,10 @@ const Skills = () => {
         </h2>
         <div className="skills flex gap-5 flex-wrap">
           {skills.map((skill, idx) => (
-            <img
-              src={skill.icon}
-              alt={skill.text}
-              className="border-[var(--primary)] rounded-full"
-            />
+            <div className="flex gap-2 items-center border bg-[var(--badge-bg-color)] px-2.5 py-1.5 rounded-full">
+              <skill.icon color={skill.color} className="align-middle inline" />
+              <span className="text-[12px] text-gray-600">{skill.text}</span>
+            </div>
           ))}
         </div>
       </div>

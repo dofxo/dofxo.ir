@@ -1,53 +1,65 @@
-import cssIcon from "/src/assets/images/css.svg";
-import htmlIcon from "/src/assets/images/html.svg";
-import jsIcon from "/src/assets/images/js.svg";
-import tsIcon from "/src/assets/images/ts.svg";
-import reactIcon from "/src/assets/images/react.svg";
-import sassIcon from "/src/assets/images/sass.svg";
-import tailwindIcon from "/src/assets/images/tailwind.svg";
-import muiIcon from "/src/assets/images/MUI.svg";
-import nextJsIcon from "/src/assets/images/next.svg";
-import reduxIcon from "/src/assets/images/redux.svg";
+import {
+  SiHtml5,
+  SiCss3,
+  SiSass,
+  SiTailwindcss,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiRedux,
+  SiNextdotjs,
+  SiMui,
+} from "react-icons/si";
 
 export const skills = [
   {
     text: "HTML",
-    icon: htmlIcon,
+    icon: SiHtml5,
+    color: "#E34F26", // HTML5 logo color
   },
   {
     text: "CSS",
-    icon: cssIcon,
+    icon: SiCss3,
+    color: "#1572B6", // CSS3 logo color
   },
   {
     text: "Sass",
-    icon: sassIcon,
+    icon: SiSass,
+    color: "#CC6699", // Sass logo color
   },
   {
     text: "Tailwindcss",
-    icon: tailwindIcon,
+    icon: SiTailwindcss,
+    color: "#38BDF8", // TailwindCSS logo color
   },
   {
     text: "JavaScript",
-    icon: jsIcon,
+    icon: SiJavascript,
+    color: "#F7DF1E", // JavaScript logo color
   },
   {
     text: "TypeScript",
-    icon: tsIcon,
+    icon: SiTypescript,
+    color: "#3178C6", // TypeScript logo color
   },
   {
     text: "ReactJs",
-    icon: reactIcon,
+    icon: SiReact,
+    color: "#61DAFB", // React logo color
   },
   {
     text: "Redux",
-    icon: reduxIcon,
+    icon: SiRedux,
+    color: "#764ABC", // Redux logo color
   },
   {
     text: "NextJs",
-    icon: nextJsIcon,
+    icon: SiNextdotjs,
+    color: "#000000", // Next.js logo color
   },
   {
     text: "MUI",
-    icon: muiIcon,
+    icon: SiMui,
+    color: "#007FFF", // Material-UI logo color
   },
 ];
