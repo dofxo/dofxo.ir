@@ -1,9 +1,21 @@
 @use "/public/fonts/iransans/stylesheet.scss";
+@use "./scss/colors.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: var(--bg-color);
+}
+
+
 * {
   font-family: "IRANSansX", "tahoma";
+}
+
+.container {
+  max-width: 1200px;
+  width: 90vw;
+  margin: 0 auto;
 }

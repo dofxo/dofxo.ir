@@ -1,0 +1,15 @@
+:root {
+  &[data-theme="light"] {
+    --primary: #1F509A;
+    --bg-color: #fff;
+    --shadow-color: #00000020
+  }
+
+
+  &[data-theme="dark"] {
+    --primary: #8DC5E7;
+    --bg-color: #111;
+    --shadow-color: rgb(46, 45, 45)
+  }
+
+}
