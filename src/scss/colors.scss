@@ -3,15 +3,22 @@
     --primary: #1F509A;
     --bg-color: #fff;
     --shadow-color: #00000020;
-    --text-color: #000
+    --text-color: #000;
+    --text-secondary-color: #414a59;
+    --button-text-color: #fff;
+    --hover-color: #f1f5f9;
   }
 
 
   &[data-theme="dark"] {
-    --primary: #8DC5E7;
+    --primary: #FCC737;
     --bg-color: #111;
     --shadow-color: rgb(46, 45, 45);
-    --text-color: #fff
+    --text-color: #fff;
+    --text-secondary-color: #ccc;
+    --button-text-color: #000;
+    --hover-color: #334155;
+
   }
 
 }

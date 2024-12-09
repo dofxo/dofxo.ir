@@ -1,4 +1,5 @@
 import Header from "./components/Header.tsx";
+import HeroSection from "./components/HeroSection.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
@@ -11,6 +12,7 @@ const App = () => {
     <MainContext.Provider value={{ theme, setTheme }}>
       <main className="grid gap-[24px]">
         <Header />
+        <HeroSection />
       </main>
     </MainContext.Provider>
   );

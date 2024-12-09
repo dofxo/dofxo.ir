@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 import { socials } from "@/data/socials";
 
 const iconSize = 15;
-const iconStyles = "hover:bg-gray-50 p-1 rounded transition";
+const iconStyles = "hover:bg-[var(--hover-color)] p-1 rounded transition";
 
 const Header = () => {
   const { theme, setTheme } = useContext(MainContext);
@@ -36,8 +36,8 @@ const Header = () => {
             )}
           </button>
           <Popover>
-            <PopoverTrigger>
-              <User2 size={25} className={iconStyles} color="var(--primary)" />
+            <PopoverTrigger className={`${iconSize}px`}>
+              <User2 className={iconStyles} color="var(--primary)" />
             </PopoverTrigger>
             <PopoverContent className="bg-[var(--bg-color)] flex flex-col ml-5 gap-5">
               <h5 className="text-[var(--text-color)] font-bold">
