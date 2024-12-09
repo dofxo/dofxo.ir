@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export const useChangeTheme = (
   themeFromLocalStorage: string,
-): [React.Dispatch<React.SetStateAction<string>>] => {
+): [string, React.Dispatch<React.SetStateAction<string>>] => {
   const [theme, setTheme] = useState<string>(themeFromLocalStorage);
 
   useEffect(() => {
@@ -12,5 +12,5 @@ export const useChangeTheme = (
     html.dataset.theme = theme;
   }, [theme]);
 
-  return [setTheme];
+  return [theme, setTheme];
 };
