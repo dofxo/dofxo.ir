@@ -16,7 +16,7 @@ const iconStyles = "hover:bg-[var(--hover-color)] p-1 rounded transition";
 const Header = () => {
   const { theme, setTheme } = useContext(MainContext);
   return (
-    <header className="py-5 md:p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
+    <header className="sticky top-0 bg-[var(--bg-color)] z-[1000] py-5 md:p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
       <div className="container flex items-center justify-between">
         <a href="/" className="text-2xl text-[var(--primary)] font-[SourGummy]">
           {`</dofxo>`}

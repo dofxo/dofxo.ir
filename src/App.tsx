@@ -3,6 +3,7 @@ import Footer from "./components/Footer.tsx";
 import Header from "./components/Header.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 import Projects from "./components/projects/Projects.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import Skills from "./components/Skills.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
@@ -22,6 +23,7 @@ const App = () => {
         <Projects />
       </main>
       <Footer />
+      <ScrollToTop />
     </MainContext.Provider>
   );
 };
