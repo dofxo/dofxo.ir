@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { Slide } from "react-awesome-reveal";
-const dofxoImg = "src/assets/images/dofxo.jpg";
 
 const HeroSection = () => {
   return (
@@ -41,7 +40,11 @@ const HeroSection = () => {
         </div>
 
         <div className="w-[200px] md:w-[300px]">
-          <img src={dofxoImg} alt="dofxoImage" className="rounded-full " />
+          <img
+            src="/images/dofxo.jpg"
+            alt="dofxoImage"
+            className="rounded-full "
+          />
         </div>
       </div>
     </section>
