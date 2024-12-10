@@ -1,6 +1,7 @@
 import Experience from "./components/experience/Experience.tsx";
 import Header from "./components/Header.tsx";
 import HeroSection from "./components/HeroSection.tsx";
+import Projects from "./components/projects/Projects.tsx";
 import Skills from "./components/Skills.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
@@ -17,6 +18,7 @@ const App = () => {
         <HeroSection />
         <Skills />
         <Experience />
+        <Projects />
       </main>
     </MainContext.Provider>
   );
