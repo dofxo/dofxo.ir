@@ -1,4 +1,5 @@
 import Experience from "./components/experience/Experience.tsx";
+import Footer from "./components/Footer.tsx";
 import Header from "./components/Header.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 import Projects from "./components/projects/Projects.tsx";
@@ -20,6 +21,7 @@ const App = () => {
         <Experience />
         <Projects />
       </main>
+      <Footer />
     </MainContext.Provider>
   );
 };
