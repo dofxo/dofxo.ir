@@ -19,7 +19,7 @@ jobs:
           bun-version: "latest"
 
       - name: Install dependencies using Bun
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Clean old build
         run: rm -rf ./dist
