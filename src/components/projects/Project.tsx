@@ -10,7 +10,7 @@ const Project = ({
   sourceCode,
 }: projectType) => {
   return (
-    <div className="rounded-[10px] px-5 py-3 border border-gray-200 max-w-[345px] flex justify-between flex-col gap-2">
+    <div className="rounded-[10px] h-full px-5 py-3 border border-gray-200 max-w-[345px] flex justify-between flex-col gap-2">
       <div className="content flex flex-col gap-3">
         <h3 className="font-bold text-[var(--text-color)] text-[18px]">
           {title}

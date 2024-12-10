@@ -11,7 +11,7 @@ const ScrollToTop = () => {
     <ArrowUp
       size={35}
       color="var(--text-color)"
-      className="fixed left-10 bottom-10 rounded-full p-2 border bg-[var(--bg-color)] cursor-pointer"
+      className="fixed left-5 md:left-10 bottom-5 md:bottom-10 rounded-full p-2 border bg-[var(--bg-color)] cursor-pointer"
       onClick={() => window.scrollTo(0, 0)}
     />
   ) : null;
