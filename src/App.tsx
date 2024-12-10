@@ -1,3 +1,4 @@
+import Experience from "./components/experience/Experience.tsx";
 import Header from "./components/Header.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 import Skills from "./components/Skills.tsx";
@@ -15,6 +16,7 @@ const App = () => {
       <main className="grid gap-[100px] pb-10">
         <HeroSection />
         <Skills />
+        <Experience />
       </main>
     </MainContext.Provider>
   );

@@ -2,6 +2,7 @@ import { MainContext } from "@/context";
 import { skills } from "@/data/skills";
 import { Rocket } from "lucide-react";
 import { useContext } from "react";
+import Title from "./general/Title";
 
 const Skills = () => {
   const { theme } = useContext(MainContext);
@@ -9,10 +10,7 @@ const Skills = () => {
   return (
     <section>
       <div className="container flex flex-col gap-10">
-        <h2 className="title">
-          <Rocket color="var(--primary)" />
-          <span> مهارت های من</span>
-        </h2>
+        <Title title="مهارت های من" icon={<Rocket color="var(--primary)" />} />
         <div className="skills flex gap-5 flex-wrap">
           {skills.map((skill, idx) => (
             <div

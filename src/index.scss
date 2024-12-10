@@ -33,3 +33,12 @@ body {
   gap: 10px;
   align-items: center;
 }
+
+.ant-timeline-item-content {
+  inset-block-start: -2.5px !important;
+  margin-inline-start: 20px !important;
+}
+
+.ant-timeline-item-tail {
+  background-color: var(--text-secondary-color) !important;
+}
