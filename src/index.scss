@@ -54,3 +54,9 @@ body {
 .ant-timeline-item-tail {
   background-color: var(--text-secondary-color) !important;
 }
+
+div {
+  &[data-radix-popper-content-wrapper] {
+    z-index: 10002 !important;
+  }
+}
