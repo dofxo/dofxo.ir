@@ -13,6 +13,16 @@ body {
 
 * {
   font-family: "IRANSansX", "tahoma";
+
+  // Enable font feature setting 'ss02' for Firefox
+  -moz-font-feature-settings: "ss02";
+
+  // Enable font feature setting 'ss02' for Webkit-based browsers
+  -webkit-font-feature-settings: "ss02";
+
+  // Enable font feature setting 'ss02' for other browsers
+  font-feature-settings: "ss02";
+
 }
 
 .container {
