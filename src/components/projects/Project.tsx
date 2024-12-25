@@ -23,12 +23,12 @@ const Project = ({
       <div className="project-card-footer flex justify-between items-center">
         <div className="links flex gap-[25px] items-center">
           {websiteLink && (
-            <a href={websiteLink}>
+            <a href={websiteLink} target="_blank">
               <Link size={15} color="var(--text-color)" />
             </a>
           )}
           {sourceCode && (
-            <a href={sourceCode}>
+            <a href={sourceCode} target="_blank">
               <GithubIcon size={15} color="var(--text-color)" />
             </a>
           )}
