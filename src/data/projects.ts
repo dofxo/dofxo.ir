@@ -8,12 +8,14 @@ export const projects: projectsType = [
             برنامه‌های وب. ساخته شده با جاوااسکریپت خالص و بدون وابستگی.`,
     role: "FrontEnd Developer",
     sourceCode: "https://github.com/silverethical/silverbox/",
+    skills: ["Javascript", "Scss"],
   },
   {
     title: "Tonrow",
     websiteLink: "https://tonrow.ir/",
     role: "FrontEnd Developer",
     description: `اپلیکیشن وب تحویل آنلاین برای شهر بوشهر، ایران که شامل درخواست‌های خرید و انتقال بسته‌ها می‌باشد.`,
+    skills: ["Javascript", "Scss", "EJS", "Socket.io", "Swiper", "Alpine.js"],
   },
   {
     title: "مربی باشگاه",
@@ -21,11 +23,13 @@ export const projects: projectsType = [
     sourceCode: "https://github.com/Silverethical/gym-trainer-website/",
     role: "FrontEnd Developer",
     description: `وبسایت مربی باشگاه برای فاطمه حیدری، شامل خدمات وی در حوزه تناسب اندام و سلامتی و اطلاعات کامل درباره خدمات او مبیاشد.`,
+    skills: ["Typescript", "React.js", "Swiper", "TailwindCSS"],
   },
   {
-    title: "PDL",
+    title: "NSD",
     websiteLink: "https://niro-saee.vercel.app/",
     role: "FrontEnd Developer",
     description: `طراحی و توسعه وب‌سایتی حرفه‌ای برای معرفی خدمات شرکت نیرو ساعی درخش، شامل بخش‌های معرفی شرکت، خدمات مهندسی و پیمانکاری، نمونه‌کارها، و ارتباط با مشتریان. این وب‌سایت با طراحی مدرن و کاربرپسند، نمایانگر هویت و فعالیت‌های شرکت است.`,
+    skills: ["Typescript", "Next.js", "Swiper", "shadcn/ui", "TailwindCSS"],
   },
 ];

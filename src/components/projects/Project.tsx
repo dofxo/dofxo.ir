@@ -8,6 +8,7 @@ const Project = ({
   role,
   websiteLink,
   sourceCode,
+  skills,
 }: projectType) => {
   return (
     <div className="rounded-[10px] h-full px-5 py-3 border border-gray-200 max-w-[345px] flex justify-between flex-col gap-2">
@@ -18,6 +19,16 @@ const Project = ({
         <p className="text-[var(--text-secondary-color)] text-[13px]">
           {description}
         </p>
+        <div className="skills flex gap-2 flex-wrap">
+          {skills?.map((item, idx) => (
+            <div
+              className="flex gap-2 text-[11px] text-[--text-color] items-center border bg-[var(--badge-bg-color)] px-2.5 py-1.5 rounded-full"
+              key={idx}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
       <Separator className="my-2 bg-gray-200" />
       <div className="project-card-footer flex justify-between items-center">

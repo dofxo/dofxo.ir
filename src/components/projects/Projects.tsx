@@ -19,6 +19,7 @@ const Projects = () => {
                 sourceCode={project.sourceCode}
                 role={project.role}
                 websiteLink={project.websiteLink}
+                skills={project.skills}
               />
             </AttentionSeeker>
           ))}
