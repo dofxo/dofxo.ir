@@ -10,7 +10,10 @@ const Projects = () => {
     <section>
       <div className="container flex flex-col gap-5 items-center">
         <Title title="پروژه ها" icon={<Code color="var(--primary)" />} />
-        <div id="projects" className="flex gap-5 flex-wrap">
+        <div
+          id="projects"
+          className="flex gap-5 flex-wrap justify-center md:justify-start"
+        >
           {projects.map((project, idx) => (
             <AttentionSeeker key={idx} duration={1500} effect="headShake">
               <Project
