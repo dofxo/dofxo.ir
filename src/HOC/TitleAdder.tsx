@@ -5,7 +5,7 @@ const TitleAdder = (WrappedComponent: any, title: string) => {
     return (
       <>
         <Helmet>
-          <title>{title}</title>
+          <title>{title} | 76015233</title>
         </Helmet>
         <WrappedComponent {...props} />{" "}
       </>
