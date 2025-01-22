@@ -40,4 +40,12 @@ export const projects: projectsType = [
     description: `این پروژه ابزاری است که امکان مشاهده چت‌های زنده از استریم‌های Twitch را فراهم می‌کند. کاربران با وارد کردن نام استریمر، می‌توانند چت زنده مرتبط با استریم او را دنبال کنند.`,
     skills: ["Typescript", "Next.js", "shadcn/ui", "TailwindCSS"],
   },
+  {
+    title: "فاکتور فروش رمیونا",
+    websiteLink: "https://remiona.ir",
+    sourceCode: "https://github.com/Silverethical/online_invoice/",
+    role: "FrontEnd Developer",
+    description: `این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند.`,
+    skills: ["Typescript", "React.js", "MUI", "TailwindCSS"],
+  },
 ];
