@@ -47,6 +47,6 @@ export const projects: projectsType = [
     sourceCode: "https://github.com/Silverethical/online_invoice/",
     role: "FrontEnd Developer",
     description: `این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند.`,
-    skills: ["Typescript", "React.js", "MUI", "TailwindCSS"],
+    skills: ["Typescript", "React.js", "MUI", "TailwindCSS", "Ant Design"],
   },
 ];
