@@ -1,7 +1,17 @@
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Slide } from "react-awesome-reveal";
 
 const HeroSection = () => {
+  const [avatarUrl, setAvatarUrl] = useState();
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch("https://api.github.com/users/dofxo");
+      const { avatar_url } = await response.json();
+      setAvatarUrl(avatar_url);
+    })();
+  }, []);
   return (
     <section className="mt-[50px]">
       <div className="container flex flex-col-reverse gap-10 items-center md:flex-row justify-between">
@@ -41,7 +51,7 @@ const HeroSection = () => {
 
         <div className="w-[200px] md:w-[300px]">
           <img
-            src="/images/dofxo.jpg"
+            src={avatarUrl ?? ""}
             alt="dofxoImage"
             className="rounded-full "
           />
