@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Slide } from "react-awesome-reveal";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = () => {
   const [avatarUrl, setAvatarUrl] = useState();
@@ -50,10 +51,10 @@ const HeroSection = () => {
         </div>
 
         <div className="w-[200px] md:w-[300px]">
-          <img
+          <LazyLoadImage
             src={avatarUrl ?? ""}
             alt="dofxoImage"
-            className="rounded-full "
+            className="rounded-full"
           />
         </div>
       </div>
