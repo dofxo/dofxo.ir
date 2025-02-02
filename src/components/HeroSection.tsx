@@ -3,12 +3,18 @@ import { Button } from "./ui/button";
 import { Slide } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
+const token = import.meta.env.VITE_GITHUB_TOKEN;
+
 const HeroSection = () => {
   const [avatarUrl, setAvatarUrl] = useState();
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://api.github.com/users/dofxo");
+      const response = await fetch("https://api.github.com/users/dofxo", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       const { avatar_url } = await response.json();
       setAvatarUrl(avatar_url);
     })();
