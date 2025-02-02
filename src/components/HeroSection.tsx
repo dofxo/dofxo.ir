@@ -12,7 +12,7 @@ const HeroSection = () => {
     (async () => {
       const response = await fetch("https://api.github.com/users/dofxo", {
         headers: {
-          Authorization: `Bearer ${token}`,
+          Authorization: token,
         },
       });
       const { avatar_url } = await response.json();
