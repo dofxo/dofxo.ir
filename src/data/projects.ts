@@ -43,7 +43,7 @@ export const projects: projectsType = [
   },
   {
     title: "فاکتور فروش رمیونا",
-    websiteLink: "https://remiona.ir",
+    websiteLink: "https://factor.remiona.ir",
     sourceCode: "https://github.com/Silverethical/online_invoice/",
     role: "FrontEnd Developer",
     description: `این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند. (پروژه صرفا جهت استفاده در دسکتاپ است)`,
