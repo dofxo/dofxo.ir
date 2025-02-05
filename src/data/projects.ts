@@ -6,7 +6,7 @@ export const projects: projectsType = [
     websiteLink: "https://silverboxjs.ir/",
     description: `کتابخانه جاوااسکریپت سبک و چندمنظوره برای ایجاد مدال‌ها و اعلان‌های سفارشی برای
             برنامه‌های وب. ساخته شده با جاوااسکریپت خالص و بدون وابستگی.`,
-    role: "FrontEnd Developer",
+    role: "Developer",
     sourceCode: "https://github.com/silverethical/silverbox/",
     skills: ["Javascript", "Scss"],
   },
