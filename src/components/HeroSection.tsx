@@ -7,15 +7,18 @@ const token = import.meta.env.VITE_GITHUB_TOKEN;
 
 const HeroSection = () => {
   const [avatarUrl, setAvatarUrl] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
+      setIsLoading(true);
       const response = await fetch("https://api.github.com/users/dofxo", {
         headers: {
           Authorization: token,
         },
       });
       const { avatar_url } = await response.json();
+      setIsLoading(false);
       setAvatarUrl(avatar_url);
     })();
   }, []);
@@ -55,13 +58,16 @@ const HeroSection = () => {
             </Button>
           </Slide>
         </div>
-
         <div className="w-[200px] md:w-[300px]">
-          <LazyLoadImage
-            src={avatarUrl ?? ""}
-            alt="dofxoImage"
-            className="rounded-full"
-          />
+          {!isLoading ? (
+            <LazyLoadImage
+              src={avatarUrl ?? ""}
+              alt="dofxoImage"
+              className="rounded-full"
+            />
+          ) : (
+            <div className="loader"></div>
+          )}
         </div>
       </div>
     </section>

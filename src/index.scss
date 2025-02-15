@@ -1,6 +1,7 @@
 @use "/public/fonts/iransans/iransans.scss";
 @use "/public/fonts/sourGummy/sourGummy.scss";
-@use "./scss/colors.scss";
+@use "./scss/_colors";
+@use "./scss/_loading";
 
 @tailwind base;
 @tailwind components;
