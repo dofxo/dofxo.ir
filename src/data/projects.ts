@@ -10,14 +10,15 @@ export const projects: projectsType = [
     sourceCode: "https://github.com/silverethical/silverbox/",
     skills: ["Javascript", "Scss"],
   },
-  // {
-  //   title: "فرانت چپتر (1403)",
-  //   websiteLink: "https://frontchapter.ir/",
-  //   description: "لندینگ سایت فرانت چپتر برای همایش سال 1403 در شیراز طراحی و توسعه داده شد. به‌عنوان فرانت‌اند دولوپر افتخار داشتم در کنار تیم فنی فرانت چپتر در این پروژه حضور داشته باشم.",
-  //   role: "FrontEnd Developer",
-  //   sourceCode: "https://github.com/frontChapter/nextjs",
-  //   skills: ["Next.js" ,"TailwindCSS","Launch UI"],
-  // },
+  {
+    title: "فرانت چپتر (1403)",
+    websiteLink: "https://frontchapter.ir/",
+    description:
+      "لندینگ سایت فرانت چپتر برای همایش سال 1403 در شیراز طراحی و توسعه داده شد. به‌عنوان فرانت‌اند دولوپر افتخار داشتم در کنار تیم فنی فرانت چپتر در این پروژه حضور داشته باشم.",
+    role: "FrontEnd Developer",
+    sourceCode: "https://github.com/frontChapter/nextjs",
+    skills: ["Next.js", "TailwindCSS", "Launch UI"],
+  },
   {
     title: "Tonrow",
     websiteLink: "https://tonrow.ir/",
