@@ -58,7 +58,7 @@ const HeroSection = () => {
             </Button>
           </Slide>
         </div>
-        <div className="w-[200px] md:w-[300px]">
+        <div className="w-[200px] flex justify-center md:w-[300px]">
           {!isLoading ? (
             <LazyLoadImage
               src={avatarUrl ?? ""}
