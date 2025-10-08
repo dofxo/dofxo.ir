@@ -8,13 +8,22 @@ import Skills from "./components/Skills.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const themeFromLocalStorage = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useChangeTheme(themeFromLocalStorage);
+  const [lang, setLang] = useState<"fa" | "en">("fa");
+
+  // set lang value
+  useEffect(() => {
+    const url = window.location.href;
+    const currentLang = url.split("/")[3];
+    setLang(currentLang);
+  }, []);
 
   return (
-    <MainContext.Provider value={{ theme, setTheme }}>
+    <MainContext.Provider value={{ theme, setTheme, setLang, lang }}>
       <Header />
       <main className="grid gap-[100px] pb-10">
         <HeroSection />

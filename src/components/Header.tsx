@@ -14,7 +14,8 @@ const iconSize = 15;
 const iconStyles = "hover:bg-[var(--hover-color)] p-1 rounded transition";
 
 const Header = () => {
-  const { theme, setTheme } = useContext(MainContext);
+  const { theme, setTheme, lang } = useContext(MainContext);
+
   return (
     <header className="sticky top-0 bg-[var(--bg-color)] z-[1000] py-5 md:p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
       <div className="container flex items-center justify-between">
