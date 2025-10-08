@@ -10,23 +10,44 @@ import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
 import { useEffect, useState } from "react";
 import LangDirectionSetter from "./components/LangDirectionSetter.tsx";
+import LangLoader from "./components/LangLoader.tsx";
+import en from "./lang/en.json";
+import fa from "./lang/fa.json";
 
 const App = () => {
   const themeFromLocalStorage = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useChangeTheme(themeFromLocalStorage);
   const [lang, setLang] = useState<"fa" | "en">("fa");
+  const [translations, setTranslations] = useState<Record<string, string>>(en);
 
   // set lang value
   useEffect(() => {
     const url = window.location.href;
-    const currentLang = url.split("/")[3];
-    setLang(currentLang);
+    const currentLang = url.split("/")[3] as "fa" | "en";
+    if (currentLang === "fa" || currentLang === "en") {
+      setLang(currentLang);
+    }
   }, []);
 
+  // Whenever lang changes, update translations
+  useEffect(() => {
+    switch (lang) {
+      case "fa":
+        setTranslations(fa);
+        break;
+      case "en":
+      default:
+        setTranslations(en);
+    }
+  }, [lang]);
+
   return (
-    <MainContext.Provider value={{ theme, setTheme, setLang, lang }}>
+    <MainContext.Provider
+      value={{ theme, setTheme, setLang, lang, translations }}
+    >
       <Header />
       <LangDirectionSetter />
+      <LangLoader />
 
       <main className="grid gap-[100px] pb-10">
         <HeroSection />
