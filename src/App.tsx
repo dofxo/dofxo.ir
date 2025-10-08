@@ -9,6 +9,7 @@ import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
 import { useEffect, useState } from "react";
+import LangDirectionSetter from "./components/LangDirectionSetter.tsx";
 
 const App = () => {
   const themeFromLocalStorage = localStorage.getItem("theme") || "light";
@@ -25,6 +26,8 @@ const App = () => {
   return (
     <MainContext.Provider value={{ theme, setTheme, setLang, lang }}>
       <Header />
+      <LangDirectionSetter />
+
       <main className="grid gap-[100px] pb-10">
         <HeroSection />
         <Skills />
