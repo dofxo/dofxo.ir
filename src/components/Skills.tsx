@@ -6,12 +6,12 @@ import Title from "./general/Title";
 import { Fade } from "react-awesome-reveal";
 
 const Skills = () => {
-  const { theme } = useContext(MainContext);
+  const { theme,translations } = useContext(MainContext);
   const iconsTextColor = theme === "light" ? "text-gray-900" : "text-gray-300";
   return (
     <section>
       <div className="container flex flex-col gap-10">
-        <Title title="مهارت های من" icon={<Rocket color="var(--primary)" />} />
+        <Title title={translations.mySkills} icon={<Rocket color="var(--primary)" />} />
         <div className="skills flex gap-5 flex-wrap">
           {skills.map((skill, idx) => (
             <Fade delay={idx * 50} duration={500} key={idx} triggerOnce>

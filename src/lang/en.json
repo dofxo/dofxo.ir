@@ -1,1 +1,31 @@
-{}
+{
+	"name": "Mohammad Kargar",
+	"jobTitle": "Front-end Developer",
+	"jobDescription": "I’m Mohammad Kargar, a front-end developer passionate about designing and building interactive, user-friendly interfaces. My goal is to create experiences that users enjoy and that meet their needs in the best possible way.",
+	"resumeLink": "Resume Link",
+	"mySkills": "My Skills",
+	"experience": "Work and education experience",
+	"project": "Projects",
+	"viewMore": "View More",
+	"designedVia": "Designed With",
+	"copyRight": "Copy Right",
+	"socialMedia": "Social Media",
+	"switchLanguage": "Switch to Persian",
+	"projects": {
+		"webline": {
+			"description": "Full-time",
+			"place": "Webline Agency",
+			"title": "Frontend Developer"
+		},
+		"saadat": {
+			"description": "Mathematics and Physics",
+			"place": "Saadat High School, Bushehr",
+			"title": "Highschool"
+		},
+		"uni": {
+			"description": "Computer Engineering",
+			"place": "Islamic Azad University of Bushehr",
+			"title": "Bachelor"
+		}
+	}
+}

@@ -1,15 +1,18 @@
+import { MainContext } from "@/context";
 import { HeartIcon } from "lucide-react";
+import { useContext } from "react";
 
 const Footer = () => {
+  const {translations} = useContext(MainContext)
   return (
     <footer className="p-5 border-t text-[var(--text-color)] flex justify-center">
       <div className="container">
         <div className="flex justify-between text-[13px]">
           <span className="flex gap-2 items-center">
-            طراحی شده با
+            {translations.designedVia}
             <HeartIcon size={15} />
           </span>
-          <span>کپی رایت {new Date().getFullYear()} &copy;</span>
+          <span>{translations.copyRight} {new Date().getFullYear()} &copy;</span>
         </div>
       </div>
     </footer>

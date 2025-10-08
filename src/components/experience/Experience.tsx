@@ -2,16 +2,20 @@ import Title from "../general/Title";
 import { BriefcaseBusinessIcon } from "lucide-react";
 import { Timeline } from "antd";
 import ExperienceItem from "./ExperienceItem";
+import { useContext } from "react";
+import { MainContext } from "@/context";
 
 const Experience = () => {
+
+  const {translations} = useContext(MainContext)
   const timelineItems = [
     {
       children: (
         <ExperienceItem
-          title="FrontEnd Developer"
+          title={translations.projects.webline.title}
           time="1403 - 1402"
-          description="تمام وقت"
-          place="آژانس وبلاین"
+          description={translations.projects.webline.description}
+          place={translations.projects.webline.place}
         />
       ),
       color: "var(--primary)",
@@ -19,10 +23,10 @@ const Experience = () => {
     {
       children: (
         <ExperienceItem
-          title="دیپلم"
+          title={translations.projects.saadat.title}
           time="1400 - 1396"
-          description="ریاضی و فیزیک"
-          place="دبیرستان سعادت بوشهر"
+          description={translations.projects.saadat.description}
+          place={translations.projects.saadat.place}
         />
       ),
       color: "var(--primary)",
@@ -30,10 +34,10 @@ const Experience = () => {
     {
       children: (
         <ExperienceItem
-          title="کارشناسی"
+          title={translations.projects.uni.title}
           time="1404 - 1400"
-          description="مهندسی کامپیوتر"
-          place="دانشگاه آزاد اسلامی بوشهر"
+          description={translations.projects.uni.description}
+          place={translations.projects.uni.place}
         />
       ),
       color: "var(--primary)",
@@ -43,7 +47,7 @@ const Experience = () => {
     <section>
       <div className="container flex flex-col gap-10">
         <Title
-          title="تجربه کاری و تحصیلات"
+          title={translations.experience}
           icon={<BriefcaseBusinessIcon color="var(--primary)" />}
         />
         <Timeline items={timelineItems} />

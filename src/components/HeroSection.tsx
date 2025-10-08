@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { Slide } from "react-awesome-reveal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { MainContext } from "@/context";
 
 const token = import.meta.env.VITE_GITHUB_TOKEN;
 
 const HeroSection = () => {
   const [avatarUrl, setAvatarUrl] = useState();
   const [isLoading, setIsLoading] = useState(false);
+
+  const { translations } = useContext(MainContext);
 
   useEffect(() => {
     (async () => {
@@ -28,20 +31,17 @@ const HeroSection = () => {
         <div className="about-me text-center md:text-start">
           <Slide duration={500} triggerOnce>
             <h1 className="text-[var(--text-color)] font-bold text-[30px] md:text-[45px]">
-              محمد کارگر
+              {translations.name}
             </h1>
           </Slide>
           <Slide duration={500} delay={50} triggerOnce>
             <h1 className="text-[var(--text-color)]  text-[18px] font-[500]">
-              برنامه نویس و توسعه دهنده فرانت اند
+              {translations.jobTitle}
             </h1>
           </Slide>
           <Slide duration={500} delay={100} triggerOnce>
             <p className="text-[var(--text-secondary-color)]  text-[12px] md:text-[14px] leading-[30px] max-w-[500px] mt-5">
-              من محمد کارگر هستم، توسعه‌دهنده فرانت‌اند و علاقه‌مند به طراحی و
-              توسعه رابط‌های کاربری تعاملی و کاربرپسند. هدف من ایجاد تجربه‌هایی
-              است که کاربران از کار با آن‌ها لذت ببرند و نیازهای آن‌ها را به
-              بهترین شکل ممکن برآورده کنند.
+              {translations.jobDescription}
             </p>
           </Slide>
           <Slide duration={500} delay={150} triggerOnce>
@@ -53,7 +53,7 @@ const HeroSection = () => {
                 href="https://cvresume.ir/r/Aqul4IS93UaK73uEh0AusQ"
                 target="_blank"
               >
-                لینک رزومه
+                {translations.resumeLink}
               </a>
             </Button>
           </Slide>

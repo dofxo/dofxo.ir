@@ -1,4 +1,3 @@
-import { projectType } from "@/types";
 import { Separator } from "@/components/ui/separator";
 import { GithubIcon, Link } from "lucide-react";
 
@@ -9,7 +8,14 @@ const Project = ({
   websiteLink,
   sourceCode,
   skills,
-}: projectType) => {
+}:   {
+  title: string;
+  description:string;
+  role: string;
+  websiteLink?: string;
+  sourceCode?: string;
+  skills?: string[];
+}) => {
   return (
     <div className="rounded-[10px] h-full px-5 py-3 border border-gray-200 max-w-[345px] flex justify-between flex-col gap-2">
       <div className="content flex flex-col gap-3">
