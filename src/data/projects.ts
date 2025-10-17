@@ -60,7 +60,7 @@ export const projects: projectsType = [
 	{
 		title: {
 			fa: "ECRP legal faction playtime tracker",
-			en: "ECRP Map POI",
+			en: "ECRP legal faction playtime tracker",
 		},
 		websiteLink: "https://activity.legalfactions.com/",
 		sourceCode: "https://github.com/dofxo/ecrp-lfm",
