@@ -44,6 +44,35 @@ export const projects: projectsType = [
 	},
 	{
 		title: {
+			fa: "ECRP Map POI",
+			en: "ECRP Map POI",
+		},
+		websiteLink: "https://dofxo.github.io/ecrp-map-poi/",
+		sourceCode: "https://github.com/dofxo/ecrp-map-poi",
+		role: "FrontEnd Developer",
+		description: {
+			fa: `این پروژه ابزاری برای سرور بازی eclipse roleplay هست که متمرکز برای ذخیره اطلاعات مربوط به یکی از ارگان های درون بازی است.`,
+			en: `This project is a tool for the Eclipse Roleplay game server, focused on storing data related to one of the in-game organizations.
+`,
+		},
+		skills: ["TypeScript", "React.js", "TailwindCSS", "Ant Design", "Supabase"],
+	},
+	{
+		title: {
+			fa: "ECRP legal faction playtime tracker",
+			en: "ECRP Map POI",
+		},
+		websiteLink: "https://activity.legalfactions.com/",
+		sourceCode: "https://github.com/dofxo/ecrp-lfm",
+		role: "FrontEnd Developer",
+		description: {
+			fa: `این پروژه ابزاری است برای تیم مدیریت  سرور بازی Eclipse Roleplay. این ابزار مدت زمان بازی هر لیدر  فکشن را بر روی شخصیت‌های مختلفش ذخیره می‌کند و آمارهایی بر اساس آن ارائه می‌دهد تا تیم مدیریت بتواند فعالیت آن‌ها را  مانیتور کند.`,
+			en: `This project is a tool designed for the Faction Management Team of the Eclipse Roleplay game server. It tracks each faction leader’s playtime on their individual game characters and provides statistics based on that playtime, helping the Legal Management Team monitor their activity.`,
+		},
+		skills: ["TypeScript", "Next.js", "TailwindCSS", "shadcn", "Yup", "formik", "Supabase"],
+	},
+	{
+		title: {
 			fa: "مربی باشگاه",
 			en: "Gym Trainer",
 		},
@@ -69,21 +98,6 @@ export const projects: projectsType = [
 			en: `A professional website designed and developed for Niro Saee Derakhsh company, showcasing its engineering and contracting services, portfolio, and client communication. The site features a modern and user-friendly design that reflects the company's identity and activities.`,
 		},
 		skills: ["TypeScript", "Next.js", "Swiper", "shadcn/ui", "TailwindCSS"],
-	},
-	{
-		title: {
-			fa: "ECRP Map POI",
-			en: "ECRP Map POI",
-		},
-		websiteLink: "https://dofxo.github.io/ecrp-map-poi/",
-		sourceCode: "https://github.com/dofxo/ecrp-map-poi",
-		role: "FrontEnd Developer",
-		description: {
-			fa: `این پروژه ابزاری برای سرور بازی eclipse roleplay هست که متمرکز برای ذخیره اطلاعات مربوط به یکی از ارگان های درون بازی است.`,
-			en: `This project is a tool for the Eclipse Roleplay game server, focused on storing data related to one of the in-game organizations.
-`,
-		},
-		skills: ["TypeScript", "React.js", "TailwindCSS", "Ant Design", "Supabase"],
 	},
 	{
 		title: {
