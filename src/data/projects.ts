@@ -44,6 +44,20 @@ export const projects: projectsType = [
 	},
 	{
 		title: {
+			fa: "ECRP Email Format Tool",
+			en: "ECRP Email Format Tool",
+		},
+		websiteLink: "https://dofxo.github.io/LSSD-email-format-tool/",
+		sourceCode: "https://github.com/dofxo/LSSD-email-format-tool",
+		role: "FrontEnd Developer",
+		description: {
+			fa: `ابزار تولید خودکار فرمت‌های ایمیل برای فکشن (LSSD) در سرور Eclipse Roleplay، به منظور سهولت در تولید ایمیل های رسمی اتوماتیک درون بازی. از ساختارهای داینامیک برای هر بخش (RED، TSD، ATD) استفاده می‌کند.`,
+			en: `Email Format Tool designed to streamline creation and management of official LSSD email format responses for the Eclipse Roleplay server. Provides automated, division-specific format generation for RED, TSD, and ATD units, supporting dynamic input handling, deputy data persistence, and instant clipboard copy for in-game use.`,
+		},
+		skills: ["TypeScript", "React.js", "TailwindCSS", "Ant Design", "shadcn", "react-toastify"],
+	},
+	{
+		title: {
 			fa: "ECRP Map POI",
 			en: "ECRP Map POI",
 		},
@@ -52,8 +66,7 @@ export const projects: projectsType = [
 		role: "FrontEnd Developer",
 		description: {
 			fa: `این پروژه ابزاری برای سرور بازی eclipse roleplay هست که متمرکز برای ذخیره اطلاعات مربوط به یکی از ارگان های درون بازی است.`,
-			en: `This project is a tool for the Eclipse Roleplay game server, focused on storing data related to one of the in-game organizations.
-`,
+			en: `This project is a tool for the Eclipse Roleplay game server, focused on storing data related to one of the in-game organizations.`,
 		},
 		skills: ["TypeScript", "React.js", "TailwindCSS", "Ant Design", "Supabase"],
 	},
@@ -66,7 +79,7 @@ export const projects: projectsType = [
 		sourceCode: "https://github.com/dofxo/ecrp-lfm",
 		role: "FrontEnd Developer",
 		description: {
-			fa: `این پروژه ابزاری است برای تیم مدیریت  سرور بازی Eclipse Roleplay. این ابزار مدت زمان بازی هر لیدر  فکشن را بر روی شخصیت‌های مختلفش ذخیره می‌کند و آمارهایی بر اساس آن ارائه می‌دهد تا تیم مدیریت بتواند فعالیت آن‌ها را  مانیتور کند.`,
+			fa: `این پروژه ابزاری است برای تیم مدیریت سرور بازی Eclipse Roleplay. این ابزار مدت زمان بازی هر لیدر فکشن را بر روی شخصیت‌های مختلفش ذخیره می‌کند و آمارهایی بر اساس آن ارائه می‌دهد تا تیم مدیریت بتواند فعالیت آن‌ها را مانیتور کند.`,
 			en: `This project is a tool designed for the Faction Management Team of the Eclipse Roleplay game server. It tracks each faction leader’s playtime on their individual game characters and provides statistics based on that playtime, helping the Legal Management Team monitor their activity.`,
 		},
 		skills: ["TypeScript", "Next.js", "TailwindCSS", "shadcn", "Yup", "formik", "Supabase"],
@@ -94,8 +107,8 @@ export const projects: projectsType = [
 		sourceCode: "https://github.com/fulcain/niro-saee",
 		role: "FrontEnd Developer",
 		description: {
-			fa: `طراحی و توسعه وب‌سایتی حرفه‌ای برای معرفی خدمات شرکت نیرو ساعی درخش، شامل بخش‌های معرفی شرکت، خدمات مهندسی و پیمانکاری، نمونه‌کارها، و ارتباط با مشتریان. این وب‌سایت با طراحی مدرن و کاربرپسند، نمایانگر هویت و فعالیت‌های شرکت است.`,
-			en: `A professional website designed and developed for Niro Saee Derakhsh company, showcasing its engineering and contracting services, portfolio, and client communication. The site features a modern and user-friendly design that reflects the company's identity and activities.`,
+			fa: `طراحی و توسعه وب‌سایتی حرفه‌ای برای معرفی خدمات شرکت نیرو ساعی درخش، شامل بخش‌های معرفی شرکت، خدمات مهندسی و پیمانکاری، نمونه‌کارها، و ارتباط با مشتریان.`,
+			en: `A professional website designed and developed for Niro Saee Derakhsh company, showcasing its engineering and contracting services, portfolio, and client communication.`,
 		},
 		skills: ["TypeScript", "Next.js", "Swiper", "shadcn/ui", "TailwindCSS"],
 	},
@@ -108,8 +121,8 @@ export const projects: projectsType = [
 		sourceCode: "https://github.com/Silverethical/online_invoice/",
 		role: "FrontEnd Developer",
 		description: {
-			fa: `این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است. این ابزار به فروشگاه کمک می‌کند تا فرآیند صدور فاکتور را سریع‌تر، دقیق‌تر و استانداردتر انجام داده و اطلاعات خرید مشتریان را به شکلی منظم ذخیره کند. (پروژه صرفا جهت استفاده در دسکتاپ است)`,
-			en: `A professional invoicing tool specifically designed for Remiona store. It helps streamline the billing process, making it faster, more accurate, and standardized while neatly storing customer purchase information. (Desktop-only project)`,
+			fa: `این پروژه ابزاری حرفه‌ای برای صدور فاکتور فروشگاهی است که به‌صورت اختصاصی برای فروشگاه رمیونا طراحی و پیاده‌سازی شده است.`,
+			en: `A professional invoicing tool specifically designed for Remiona store. It helps streamline the billing process, making it faster, more accurate, and standardized while neatly storing customer purchase information.`,
 		},
 		skills: ["TypeScript", "React.js", "MUI", "TailwindCSS", "Ant Design"],
 	},
