@@ -47,7 +47,7 @@ export const projects: projectsType = [
 			fa: "ECRP Email Format Tool",
 			en: "ECRP Email Format Tool",
 		},
-		websiteLink: "https://dofxo.github.io/LSSD-email-format-tool/",
+		websiteLink: "https://lssd-email-format-tool.vercel.app/",
 		sourceCode: "https://github.com/dofxo/LSSD-email-format-tool",
 		role: "FrontEnd Developer",
 		description: {
