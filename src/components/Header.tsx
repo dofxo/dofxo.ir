@@ -29,7 +29,7 @@ const Header = () => {
 					<button
 						onClick={toggleLang}
 						className="flex items-center gap-2 transition hover:scale-105"
-						title={lang === "fa" ? "Switch to English" : "تغییر به فارسی"}
+						title={lang === "en" ? "Switch to English" : "تغییر به فارسی"}
 					>
 						{lang === "fa" ? (
 							<div className="flex items-center gap-2">
