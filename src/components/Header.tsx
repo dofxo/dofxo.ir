@@ -17,6 +17,8 @@ const Header = () => {
 		setLang(newLang);
 	};
 
+	console.log(lang === 'fa');
+
 	return (
 		<header className="sticky top-0 bg-[var(--bg-color)] z-[1000] py-5 md:p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
 			<div className="container flex items-center justify-between">
@@ -29,19 +31,19 @@ const Header = () => {
 					<button
 						onClick={toggleLang}
 						className="flex items-center gap-2 transition hover:scale-105"
-						title={lang === "en" ? "Switch to English" : "تغییر به فارسی"}
+						title={lang === "fa" ? "Switch to English" : "تغییر به فارسی"}
 					>
 						{lang === "fa" ? (
 							<div className="flex items-center gap-2">
 								<span className="text-[var(--text-color)] text-sm font-medium">
-									{translations.switchLanguage || "English"}
+									{"Switch to English"}
 								</span>
 								<ReactCountryFlag countryCode="US" svg style={{ fontSize: "1.5rem" }} />
 							</div>
 						) : (
 							<div className="flex items-center gap-2">
 								<span className="text-[var(--text-color)] text-xs font-medium">
-									{translations.switchLanguage || "فارسی"}
+									{"تغییر به فارسی"}
 								</span>
 								<ReactCountryFlag countryCode="IR" svg style={{ fontSize: "1.5rem" }} />
 							</div>
