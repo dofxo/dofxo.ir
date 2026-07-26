@@ -1,6 +1,25 @@
 import { projectsType } from "@/types";
 
 export const projects: projectsType = [
+
+	{
+		title: {
+			fa: "منوساز",
+			en: "menusaz",
+		},
+		websiteLink: "https://menu-saz.ir/",
+		description: {
+			fa: `
+			مشارکت در توسعه یک پلتفرم SaaS برای ساخت و مدیریت منوی دیجیتال رستوران‌ها و کافه‌ها در قالب  یک تیم دو نفره. مسئول طراحی و توسعه رابط کاربری، اتصال فرانت‌اند به API و پایگاه داده، پیاده‌سازی امکانات مدیریت منو و شخصی‌سازی تنظیمات. همچنین در استقرار پروژه روی سرور، پیکربندی محیط Production و بهینه‌سازی عملکرد و تجربه کاربری همکاری داشتم. 
+			`,
+			en: `
+			Contributed to the development of a SaaS platform for creating and managing digital menus for restaurants and cafés as part of a two-developer team. Responsible for designing and developing the user interface, integrating the frontend with APIs and the database, and implementing menu management and customization features. Also collaborated on server deployment, production environment configuration, and performance and user experience optimization.
+			`,
+		},
+		role: "Developer",
+		sourceCode: "https://github.com/dofxo/menu-maker/",
+		skills: ["Nextjs", "Tailwind", "Shadcn","MongoDB", "Typescript", "Nginx"],
+	},
 	{
 		title: {
 			fa: "SilverBox",

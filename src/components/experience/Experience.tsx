@@ -12,17 +12,6 @@ const Experience = () => {
     {
       children: (
         <ExperienceItem
-          title={translations.projects.webline.title}
-          time="1403 - 1402"
-          description={translations.projects.webline.description}
-          place={translations.projects.webline.place}
-        />
-      ),
-      color: "var(--primary)",
-    },
-    {
-      children: (
-        <ExperienceItem
           title={translations.projects.saadat.title}
           time="1400 - 1396"
           description={translations.projects.saadat.description}
@@ -39,6 +28,17 @@ const Experience = () => {
           description={translations.projects.uni.description}
           place={translations.projects.uni.place}
         />
+      ),
+      color: "var(--primary)",
+    },
+    {
+      children: (
+          <ExperienceItem
+              title={translations.projects.webline.title}
+              time="1403 - 1402"
+              description={translations.projects.webline.description}
+              place={translations.projects.webline.place}
+          />
       ),
       color: "var(--primary)",
     },

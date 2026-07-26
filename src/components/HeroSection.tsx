@@ -10,6 +10,8 @@ const HeroSection = () => {
   const [avatarUrl, setAvatarUrl] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
+  const noGithub = true
+
   const { translations } = useContext(MainContext);
 
   useEffect(() => {
@@ -50,10 +52,10 @@ const HeroSection = () => {
               className="text-[var(--button-text-color)]  bg-[var(--primary)] mt-[15px] rounded-[20px]"
             >
               <a
-                href="https://cvresume.ir/r/Aqul4IS93UaK73uEh0AusQ"
-                target="_blank"
+                href="/%20کارگر%20-%20رزومه.pdf"
+                download
               >
-                {translations.resumeLink}
+                {translations.downloadResume}
               </a>
             </Button>
           </Slide>
@@ -66,7 +68,7 @@ const HeroSection = () => {
               className="rounded-full"
             />
           ) : (
-            <div className="loader"></div>
+            !noGithub && <div className="loader"></div>
           )}
         </div>
       </div>

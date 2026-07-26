@@ -1,6 +1,6 @@
 import {
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiSass,
   SiTailwindcss,
   SiJavascript,
@@ -19,7 +19,7 @@ export const skills = [
   },
   {
     text: "CSS",
-    icon: SiCss3,
+    icon: SiCss,
     color: "#1572B6", // CSS3 logo color
   },
   {
