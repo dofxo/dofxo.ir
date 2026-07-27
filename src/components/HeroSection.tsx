@@ -52,7 +52,7 @@ const HeroSection = () => {
               className="text-[var(--button-text-color)]  bg-[var(--primary)] mt-[15px] rounded-[20px]"
             >
               <a
-                href="/%20کارگر%20-%20رزومه.pdf"
+                href="/resume.pdf"
                 download
               >
                 {translations.downloadResume}
