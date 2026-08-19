@@ -1,7 +1,6 @@
 import { projectsType } from "@/types";
 
 export const projects: projectsType = [
-
 	{
 		title: {
 			fa: "منوساز",
@@ -10,7 +9,7 @@ export const projects: projectsType = [
 		websiteLink: "https://menu-saz.ir/",
 		description: {
 			fa: `
-			مشارکت در توسعه یک پلتفرم SaaS برای ساخت و مدیریت منوی دیجیتال رستوران‌ها و کافه‌ها در قالب  یک تیم دو نفره. مسئول طراحی و توسعه رابط کاربری، اتصال فرانت‌اند به API و پایگاه داده، پیاده‌سازی امکانات مدیریت منو و شخصی‌سازی تنظیمات. همچنین در استقرار پروژه روی سرور، پیکربندی محیط Production و بهینه‌سازی عملکرد و تجربه کاربری همکاری داشتم. 
+			مشارکت در توسعه یک پلتفرم SaaS برای ساخت و مدیریت منوی دیجیتال رستوران‌ها و کافه‌ها در قالب  یک تیم دو نفره. مسئول طراحی و توسعه رابط کاربری، اتصال فرانت‌اند به API و پایگاه داده، پیاده‌سازی امکانات مدیریت منو و شخصی‌سازی تنظیمات. همچنین در استقرار پروژه روی سرور، پیکربندی محیط Production و بهینه‌سازی عملکرد و تجربه کاربری همکاری داشتم.
 			`,
 			en: `
 			Contributed to the development of a SaaS platform for creating and managing digital menus for restaurants and cafés as part of a two-developer team. Responsible for designing and developing the user interface, integrating the frontend with APIs and the database, and implementing menu management and customization features. Also collaborated on server deployment, production environment configuration, and performance and user experience optimization.
@@ -18,7 +17,49 @@ export const projects: projectsType = [
 		},
 		role: "Developer",
 		sourceCode: "https://github.com/dofxo/menu-maker/",
-		skills: ["Nextjs", "Tailwind", "Shadcn","MongoDB", "Typescript", "Nginx"],
+		skills: ["Nextjs", "Tailwind", "Shadcn", "MongoDB", "Typescript", "Github Action"],
+	},
+
+	{
+		title: {
+			fa: "ترکر فیلم",
+			en: "Movie Tracker",
+		},
+		websiteLink: "https://fulcain-movie-tracker.vercel.app/",
+		description: {
+			fa: `یک اپلیکیشن فول‌استک برای تماشای گروهی و خصوصی فیلم و سریال. کاربران حساب می‌سازند، از طریق کد اتاق به گروه‌های خصوصی دعوت می‌شوند و پیشرفت هر عضو را روی هر عنوان دنبال می‌کنند. احراز هویت با ایمیل/رمز (scrypt) و گوگل (OAuth)، دیتابیس MongoDB، به‌روزرسانی زنده، داشبورد مدیریت و پشتیبانی از چند پلتفرم شامل وب، اندروید (Capacitor) و دسکتاپ ویندوز (Electron) با CI/CD گیت‌هاب.`,
+			en: `A full-stack app for private watch parties: users create accounts, join invite-only parties via room codes and track every member's progress on movies and series. Features email/password (scrypt) and Google OAuth authentication, MongoDB persistence, live updates, an admin dashboard and multi-platform support: web, Android (Capacitor) and Windows desktop (Electron) with CI/CD via GitHub Actions.`,
+		},
+		role: "Developer",
+		sourceCode: "https://github.com/fulcain/movie-tracker-releases/",
+		skills: [
+			"Next.js",
+			"Typescript",
+			"Tailwind",
+			"MongoDB",
+			"Node.js",
+			"Capacitor",
+			"Electron",
+			"Google Oauth",
+			"Shadcn",
+			"Lucide",
+			"Github Action",
+		],
+	},
+
+	{
+		title: {
+			fa: "فرانت چپتر (1403)",
+			en: "Front Chapter (2024)",
+		},
+		websiteLink: "https://frontchapter.ir/",
+		description: {
+			fa: `لندینگ سایت فرانت چپتر برای همایش سال 1403 در شیراز طراحی و توسعه داده شد. به‌عنوان فرانت‌اند دولوپر افتخار داشتم در کنار تیم فنی فرانت چپتر در این پروژه حضور داشته باشم.`,
+			en: `Front Chapter’s landing page for the 2024 conference in Shiraz was designed and developed. I had the honor of contributing as a front-end developer alongside the Front Chapter technical team.`,
+		},
+		role: "FrontEnd Developer",
+		sourceCode: "https://github.com/frontChapter/nextjs",
+		skills: ["Next.js", "TailwindCSS", "Launch UI"],
 	},
 	{
 		title: {
@@ -33,20 +74,6 @@ export const projects: projectsType = [
 		role: "Developer",
 		sourceCode: "https://github.com/silverethical/silverbox/",
 		skills: ["JavaScript", "SCSS"],
-	},
-	{
-		title: {
-			fa: "فرانت چپتر (1403)",
-			en: "Front Chapter (2024)",
-		},
-		websiteLink: "https://frontchapter.ir/",
-		description: {
-			fa: `لندینگ سایت فرانت چپتر برای همایش سال 1403 در شیراز طراحی و توسعه داده شد. به‌عنوان فرانت‌اند دولوپر افتخار داشتم در کنار تیم فنی فرانت چپتر در این پروژه حضور داشته باشم.`,
-			en: `Front Chapter’s landing page for the 2024 conference in Shiraz was designed and developed. I had the honor of contributing as a front-end developer alongside the Front Chapter technical team.`,
-		},
-		role: "FrontEnd Developer",
-		sourceCode: "https://github.com/frontChapter/nextjs",
-		skills: ["Next.js", "TailwindCSS", "Launch UI"],
 	},
 	{
 		title: {
