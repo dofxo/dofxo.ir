@@ -4,13 +4,6 @@ import { Copy, Check, Eye, EyeOff, Pencil, Trash2, Lock } from "lucide-react";
 import { vaultCopy } from "./vaultText";
 import type { Credential } from "@/types";
 
-const palette = ["#1F509A", "#0e9f6e", "#b91c1c", "#6d28d9", "#b45309", "#0e7490", "#be185d", "#4d7c0f"];
-
-const colorFor = (service: string) => {
-	const sum = Array.from(service).reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
-	return palette[sum % palette.length];
-};
-
 const masked = (password: string) =>
 	password.length > 24 ? "•".repeat(24) + "…" : "•".repeat(password.length);
 
@@ -42,21 +35,13 @@ const CredentialCard = ({
 
 	return (
 		<div className="rounded-[10px] border border-[var(--shadow-color)] bg-[var(--bg-color)] p-5 flex flex-col gap-4 shadow-sm shadow-[var(--shadow-color)]">
-			<div className="flex items-center gap-3 min-w-0">
-				<div
-					className="w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0 text-white font-bold text-[16px]"
-					style={{ backgroundColor: colorFor(credential.service) }}
-				>
-					{(credential.service.trim()[0] ?? "?").toUpperCase()}
-				</div>
-				<div className="min-w-0">
-					<h4 className="text-[var(--text-color)] font-bold text-[15px] truncate">
-						{credential.service}
-					</h4>
-					<p className="text-[var(--text-secondary-color)] text-[12px] truncate mt-0.5">
-						{credential.account}
-					</p>
-				</div>
+			<div className="min-w-0">
+				<h4 className="text-[var(--text-color)] font-bold text-[15px] truncate">
+					{credential.service}
+				</h4>
+				<p className="text-[var(--text-secondary-color)] text-[12px] truncate mt-0.5">
+					{credential.account}
+				</p>
 			</div>
 
 			<div className="rounded-[10px] bg-[var(--hover-color)] px-3.5 py-2.5 flex items-center gap-2">
