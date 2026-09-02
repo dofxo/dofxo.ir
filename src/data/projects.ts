@@ -16,7 +16,6 @@ export const projects: projectsType = [
 			`,
 		},
 		role: "Developer",
-		sourceCode: "https://github.com/dofxo/menu-maker/",
 		skills: ["Nextjs", "Tailwind", "Shadcn", "MongoDB", "Typescript", "Github Action"],
 	},
 
@@ -122,7 +121,6 @@ export const projects: projectsType = [
 			en: "ECRP legal faction playtime tracker",
 		},
 		websiteLink: "https://activity.legalfactions.com/",
-		sourceCode: "https://github.com/dofxo/ecrp-lfm",
 		role: "FrontEnd Developer",
 		description: {
 			fa: `این پروژه ابزاری است برای تیم مدیریت سرور بازی Eclipse Roleplay. این ابزار مدت زمان بازی هر لیدر فکشن را بر روی شخصیت‌های مختلفش ذخیره می‌کند و آمارهایی بر اساس آن ارائه می‌دهد تا تیم مدیریت بتواند فعالیت آن‌ها را مانیتور کند.`,
