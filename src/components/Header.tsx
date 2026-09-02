@@ -1,6 +1,7 @@
 import { MainContext } from "@/context";
 import { Sun, Moon, User2 } from "lucide-react";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import ReactCountryFlag from "react-country-flag";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "./ui/button";
@@ -17,14 +18,12 @@ const Header = () => {
 		setLang(newLang);
 	};
 
-	console.log(lang === 'fa');
-
 	return (
 		<header className="sticky top-0 bg-[var(--bg-color)] z-[1000] py-5 md:p-5 shadow shadow-[var(--shadow-color)] flex justify-center">
 			<div className="container flex items-center justify-between">
-				<a href="/" className="text-2xl text-[var(--primary)] font-[SourGummy]">
+				<Link to="/" className="text-2xl text-[var(--primary)] font-[SourGummy]">
 					{`</dofxo>`}
-				</a>
+				</Link>
 
 				<div className="flex gap-5 items-center">
 					{/* Language Switcher */}
@@ -42,9 +41,7 @@ const Header = () => {
 							</div>
 						) : (
 							<div className="flex items-center gap-2">
-								<span className="text-[var(--text-color)] text-xs font-medium">
-									{"تغییر به فارسی"}
-								</span>
+								<span className="text-[var(--text-color)] text-xs font-medium">{"تغییر به فارسی"}</span>
 								<ReactCountryFlag countryCode="IR" svg style={{ fontSize: "1.5rem" }} />
 							</div>
 						)}

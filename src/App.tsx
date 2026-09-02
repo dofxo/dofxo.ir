@@ -1,10 +1,8 @@
-import Experience from "./components/experience/Experience.tsx";
 import Footer from "./components/Footer.tsx";
 import Header from "./components/Header.tsx";
-import HeroSection from "./components/HeroSection.tsx";
-import Projects from "./components/projects/Projects.tsx";
+import { Home, LangHome } from "./components/HomeSections.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
-import Skills from "./components/Skills.tsx";
+import VaultPage from "./components/vault/VaultPage.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
@@ -13,21 +11,27 @@ import LangDirectionSetter from "./components/LangDirectionSetter.tsx";
 import LangLoader from "./components/LangLoader.tsx";
 import en from "./lang/en.json";
 import fa from "./lang/fa.json";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+const getInitialLang = (): "fa" | "en" => {
+	// URL-prefixed routes (/fa, /en) win over the stored preference
+	const fromUrl = window.location.href.split("/")[3];
+	if (fromUrl === "fa" || fromUrl === "en") return fromUrl;
+
+	const stored = localStorage.getItem("lang");
+	return stored === "fa" || stored === "en" ? stored : "fa";
+};
 
 const App = () => {
 	const themeFromLocalStorage = localStorage.getItem("theme") || "light";
 	const [theme, setTheme] = useChangeTheme(themeFromLocalStorage);
-	const [lang, setLang] = useState<"fa" | "en">("fa");
+	const [lang, setLang] = useState<"fa" | "en">(getInitialLang);
 	const [translations, setTranslations] = useState(en);
 
-	// set lang value
+	// Persist the chosen language so every page (including /vault) keeps it
 	useEffect(() => {
-		const url = window.location.href;
-		const currentLang = url.split("/")[3] as "fa" | "en";
-		if (currentLang === "fa" || currentLang === "en") {
-			setLang(currentLang);
-		}
-	}, []);
+		localStorage.setItem("lang", lang);
+	}, [lang]);
 
 	// Whenever lang changes, update translations
 	useEffect(() => {
@@ -43,16 +47,18 @@ const App = () => {
 
 	return (
 		<MainContext.Provider value={{ theme, setTheme, setLang, lang, translations }}>
-			<Header />
 			<LangDirectionSetter />
 			<LangLoader />
 
-			<main className="grid gap-[100px] pb-10">
-				<HeroSection />
-				<Skills />
-				<Experience />
-				<Projects />
-			</main>
+			<Header />
+
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/vault" element={<VaultPage />} />
+				<Route path="/:lang" element={<LangHome />} />
+				<Route path="*" element={<Navigate to="/" replace />} />
+			</Routes>
+
 			<Footer />
 			<ScrollToTop />
 		</MainContext.Provider>

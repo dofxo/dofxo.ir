@@ -14,6 +14,7 @@
     "@radix-ui/react-popover": "^1.1.2",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@supabase/supabase-js": "^2.114.0",
     "antd": "^5.22.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -26,6 +27,7 @@
     "react-icons": "^5.4.0",
     "react-lazy-load-image-component": "^1.6.3",
     "react-number-format": "^5.4.2",
+    "react-router-dom": "^6.30.6",
     "sass": "^1.82.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
