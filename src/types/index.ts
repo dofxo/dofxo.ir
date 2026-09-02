@@ -9,6 +9,25 @@ export interface projectType {
 
 export type projectsType = projectType[];
 
+export interface ProjectItem {
+	id: string;
+	title: { fa: string; en: string };
+	description: { fa: string; en: string };
+	role: string;
+	websiteLink?: string;
+	sourceCode?: string;
+	skills?: string[];
+}
+
+export interface ProjectPayload {
+	title: { fa: string; en: string };
+	description: { fa: string; en: string };
+	role: string;
+	websiteLink?: string;
+	sourceCode?: string;
+	skills?: string[];
+}
+
 export interface Credential {
 	id: string;
 	service: string;

@@ -1,15 +1,15 @@
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { MainContext } from "@/context";
-import { ShieldCheck } from "lucide-react";
-import VaultGate from "./VaultGate";
-import VaultDashboard from "./VaultDashboard";
-import { vaultCopy } from "./vaultText";
-import { isUnlocked, markLocked, markUnlocked } from "./vaultStorage";
+import { LayoutDashboard } from "lucide-react";
+import VaultGate from "@/components/vault/VaultGate";
+import AdminDashboard from "./AdminDashboard";
+import { adminCopy } from "./adminText";
+import { isUnlocked, markLocked, markUnlocked } from "@/components/vault/vaultStorage";
 
-const VaultPage = () => {
+const AdminPage = () => {
 	const { lang } = useContext(MainContext);
-	const t = vaultCopy[lang];
+	const t = adminCopy[lang];
 
 	const [unlocked, setUnlocked] = useState(() => isUnlocked());
 
@@ -32,7 +32,7 @@ const VaultPage = () => {
 			<div className="container pt-[50px] pb-[60px] flex flex-col items-center gap-10">
 				<div className="flex flex-col items-center gap-3 text-center">
 					<div className="flex items-center gap-2.5">
-						<ShieldCheck size={26} color="var(--primary)" />
+						<LayoutDashboard size={26} color="var(--primary)" />
 						<h1 className="text-[var(--text-color)] font-bold text-[24px] md:text-[28px]">
 							{t.title}
 						</h1>
@@ -43,7 +43,7 @@ const VaultPage = () => {
 				</div>
 
 				{unlocked ? (
-					<VaultDashboard onLock={handleLock} />
+					<AdminDashboard onLock={handleLock} />
 				) : (
 					<VaultGate onUnlock={handleUnlock} />
 				)}
@@ -52,4 +52,4 @@ const VaultPage = () => {
 	);
 };
 
-export default VaultPage;
+export default AdminPage;

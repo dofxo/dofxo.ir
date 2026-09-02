@@ -1,14 +1,31 @@
-import { projects } from "@/data/projects";
 import Title from "../general/Title";
 import { Code, GithubIcon } from "lucide-react";
 import Project from "./Project";
 import { Button } from "@/components/ui/button";
 import { AttentionSeeker } from "react-awesome-reveal";
 import { MainContext } from "@/context";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import { fetchProjects } from "@/lib/projects";
+import type { ProjectItem } from "@/types";
 
 const Projects = () => {
-  const {lang,translations} = useContext(MainContext)
+  const { lang, translations } = useContext(MainContext);
+  const [projects, setProjects] = useState<ProjectItem[]>([]);
+
+  useEffect(() => {
+    let active = true;
+    fetchProjects()
+      .then((items) => {
+        if (active) setProjects(items);
+      })
+      .catch((err) => {
+        console.error("Failed to load projects:", err);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
     <section>
       <div className="container flex flex-col gap-5 items-center">
@@ -17,8 +34,8 @@ const Projects = () => {
           id="projects"
           className="flex gap-5 flex-wrap justify-center md:justify-start"
         >
-          {projects.map((project, idx) => (
-            <AttentionSeeker key={idx} duration={1500} effect="headShake">
+          {projects.map((project) => (
+            <AttentionSeeker key={project.id} duration={1500} effect="headShake">
               <Project
                 title={project.title[lang]}
                 description={project.description[lang]}

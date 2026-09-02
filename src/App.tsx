@@ -3,6 +3,7 @@ import Header from "./components/Header.tsx";
 import { Home, LangHome } from "./components/HomeSections.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 import VaultPage from "./components/vault/VaultPage.tsx";
+import AdminPage from "./components/admin/AdminPage.tsx";
 import { MainContext } from "./context/index.ts";
 import { useChangeTheme } from "./customHooks/useChangeTheme.ts";
 import TitleAdder from "./HOC/TitleAdder.tsx";
@@ -55,6 +56,7 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/vault" element={<VaultPage />} />
+				<Route path="/admin" element={<AdminPage />} />
 				<Route path="/:lang" element={<LangHome />} />
 				<Route path="*" element={<Navigate to="/" replace />} />
 			</Routes>
