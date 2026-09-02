@@ -1,4 +1,5 @@
 import Title from "../general/Title";
+import ListSkeleton from "../general/ListSkeleton";
 import { Code, GithubIcon } from "lucide-react";
 import Project from "./Project";
 import { Button } from "@/components/ui/button";
@@ -11,6 +12,7 @@ import type { ProjectItem } from "@/types";
 const Projects = () => {
   const { lang, translations } = useContext(MainContext);
   const [projects, setProjects] = useState<ProjectItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let active = true;
@@ -20,6 +22,9 @@ const Projects = () => {
       })
       .catch((err) => {
         console.error("Failed to load projects:", err);
+      })
+      .finally(() => {
+        if (active) setLoading(false);
       });
     return () => {
       active = false;
@@ -34,18 +39,22 @@ const Projects = () => {
           id="projects"
           className="flex gap-5 flex-wrap justify-center md:justify-start"
         >
-          {projects.map((project) => (
-            <AttentionSeeker key={project.id} duration={1500} effect="headShake">
-              <Project
-                title={project.title[lang]}
-                description={project.description[lang]}
-                sourceCode={project.sourceCode}
-                role={project.role}
-                websiteLink={project.websiteLink}
-                skills={project.skills}
-              />
-            </AttentionSeeker>
-          ))}
+          {loading ? (
+            <ListSkeleton count={6} />
+          ) : (
+            projects.map((project) => (
+              <AttentionSeeker key={project.id} duration={1500} effect="headShake">
+                <Project
+                  title={project.title[lang]}
+                  description={project.description[lang]}
+                  sourceCode={project.sourceCode}
+                  role={project.role}
+                  websiteLink={project.websiteLink}
+                  skills={project.skills}
+                />
+              </AttentionSeeker>
+            ))
+          )}
         </div>
         <Button variant="outline" asChild className="w-fit rounded-full mt-5">
           <a

@@ -6,12 +6,12 @@ import {
 	Unlock,
 	KeyRound,
 	LockKeyhole,
-	Loader2,
 	AlertTriangle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CredentialCard from "./CredentialCard";
 import CredentialModal from "./CredentialModal";
+import ListSkeleton from "../general/ListSkeleton";
 import { vaultCopy } from "./vaultText";
 import {
 	createCredential,
@@ -165,9 +165,7 @@ const VaultDashboard = ({ onLock }: { onLock: () => void }) => {
 
 			{/* list */}
 			{loading ? (
-				<div className="w-full py-16 flex items-center justify-center">
-					<Loader2 size={26} color="var(--primary)" className="animate-spin" />
-				</div>
+				<ListSkeleton count={6} />
 			) : dbError && credentials.length === 0 ? (
 				<div className="w-full rounded-[16px] border border-red-300 bg-red-50 dark:bg-red-950/30 py-14 flex flex-col items-center gap-4 text-center px-6">
 					<div className="w-[64px] h-[64px] rounded-full bg-[var(--badge-bg-color)] flex items-center justify-center">
