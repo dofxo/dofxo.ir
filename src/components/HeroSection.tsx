@@ -1,34 +1,36 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { Download, ArrowDown } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { SiReact, SiTypescript } from "react-icons/si";
 import { MainContext } from "@/context";
 import { socials } from "@/data/socials";
 
-const token = import.meta.env.VITE_GITHUB_TOKEN;
+// const token = import.meta.env.VITE_GITHUB_TOKEN;
+//
+// GitHub avatar fetching is disabled for now — the hero shows a custom
+// "D" logo instead. Re-enable when the profile image is wanted again.
+// const [avatarUrl, setAvatarUrl] = useState("");
+// useEffect(() => {
+//   let active = true;
+//   (async () => {
+//     try {
+//       const response = await fetch("https://api.github.com/users/dofxo", {
+//         headers: token ? { Authorization: token } : {},
+//       });
+//       if (!response.ok) return;
+//       const { avatar_url } = await response.json();
+//       if (active && avatar_url) setAvatarUrl(avatar_url);
+//     } catch {
+//       /* fall back to monogram */
+//     }
+//   })();
+//   return () => {
+//     active = false;
+//   };
+// }, []);
 
 const HeroSection = () => {
-  const [avatarUrl, setAvatarUrl] = useState("");
   const { translations, lang } = useContext(MainContext);
-
-  useEffect(() => {
-    let active = true;
-    (async () => {
-      try {
-        const response = await fetch("https://api.github.com/users/dofxo", {
-          headers: token ? { Authorization: token } : {},
-        });
-        if (!response.ok) return;
-        const { avatar_url } = await response.json();
-        if (active && avatar_url) setAvatarUrl(avatar_url);
-      } catch {
-        /* fall back to monogram */
-      }
-    })();
-    return () => {
-      active = false;
-    };
-  }, []);
 
   const github = socials[0];
 
@@ -87,20 +89,28 @@ const HeroSection = () => {
                 className="absolute inset-0 rotate-6 rounded-[36px] bg-gradient-to-tr from-[var(--primary)] via-[var(--accent)] to-transparent opacity-80"
                 aria-hidden="true"
               />
-              {/* frame */}
+              {/* frame with code logo */}
               <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-[36px] border border-[var(--ring-subtle)] bg-[var(--surface-0)] shadow-[var(--elev-hover)]">
-                {avatarUrl ? (
-                  <img
-                    src={avatarUrl}
-                    alt={translations.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <span className="font-display text-[96px] font-bold gradient-text md:text-[120px]">
-                    {translations.name[0]}
-                  </span>
-                )}
+                <svg viewBox="0 0 100 100" className="h-[55%] w-auto" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="code-logo-gradient" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stopColor="var(--primary)" />
+                      <stop offset="100%" stopColor="var(--accent)" />
+                    </linearGradient>
+                  </defs>
+                  {/* closing-tag `</>` mark */}
+                  <g
+                    fill="none"
+                    stroke="url(#code-logo-gradient)"
+                    strokeWidth="11"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M28 33 L9 50 L28 67" />
+                    <path d="M50 31 L41 69" />
+                    <path d="M72 33 L91 50 L72 67" />
+                  </g>
+                </svg>
               </div>
 
               {/* floating chips */}
