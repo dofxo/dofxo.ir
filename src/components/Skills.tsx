@@ -1,5 +1,5 @@
 import { MainContext } from "@/context";
-import { mainSkills, additionalSkills } from "@/data/skills";
+import { mainSkills, additionalSkills, aiSkills } from "@/data/skills";
 import { Rocket } from "lucide-react";
 import { useContext } from "react";
 import Title from "./general/Title";
@@ -34,6 +34,7 @@ const Skills = () => {
         <div className="flex w-full max-w-3xl flex-col gap-10">
           <SkillGroup label={translations.mainStack} skills={mainSkills} />
           <SkillGroup label={translations.additionalTools} skills={additionalSkills} />
+          <SkillGroup label={translations.aiTools} skills={aiSkills} />
         </div>
       </div>
     </section>

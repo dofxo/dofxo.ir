@@ -18,7 +18,11 @@ import {
   SiGit,
   SiSupabase,
   SiSocketdotio,
+  SiClaude,
+  SiDeepseek,
+  SiFreebsd,
 } from "react-icons/si";
+import { Bot } from "lucide-react";
 
 export const mainSkills = [
   /* ---- main stack (from README) ---- */
@@ -120,5 +124,30 @@ export const additionalSkills = [
     text: "Socket.io",
     icon: SiSocketdotio,
     color: "#010101", // Socket.io logo color
+  },
+  /* ---- OS ---- */
+  {
+    text: "Unix",
+    icon: SiFreebsd,
+    color: "#AB2B28", // FreeBSD (a Unix) logo color; no generic Unix icon exists
+  },
+];
+
+export const aiSkills = [
+  /* ---- AI tools ---- */
+  {
+    text: "Claude Code",
+    icon: SiClaude,
+    color: "#D97757", // Anthropic logo color
+  },
+  {
+    text: "DeepSeek Hardness",
+    icon: SiDeepseek,
+    color: "#4D6BFE", // DeepSeek logo color
+  },
+  {
+    text: "Freebuff",
+    icon: Bot,
+    color: "#8B5CF6", // Freebuff has no brand icon; Bot stands in for the AI agent
   },
 ];
