@@ -1,25 +1,79 @@
 :root {
   &[data-theme="light"] {
-    --primary: #1F509A;
-    --bg-color: #fff;
-    --shadow-color: #00000020;
-    --text-color: #000;
-    --text-secondary-color: #414a59;
-    --button-text-color: #fff;
-    --hover-color: #f1f5f9;
-    --badge-bg-color: #f1f5f9;
-  }
+    /* ---- signature palette ---- */
+    --primary: #4f46e5;      /* indigo */
+    --accent: #a855f7;       /* violet */
 
+    /* ---- surfaces ---- */
+    --bg-color: #f5f6fb;
+    --surface-0: #ffffff;
+    --surface-1: #eef0f8;
+    --surface-2: #e2e5f2;
+
+    /* ---- lines ---- */
+    --ring-subtle: #e5e7f2;
+    --ring: #c6cae2;
+
+    /* ---- text ---- */
+    --text-color: #171a2b;
+    --text-secondary-color: #454c66;
+    --text-secondary: #454c66;
+    --text-soft: #8a90ab;
+
+    /* ---- interactive ---- */
+    --hover-color: #eceef8;
+    --badge-bg-color: #eef0f8;
+    --shadow-color: rgba(23, 26, 55, 0.08);
+    --elev: 0 2px 6px rgba(23, 26, 55, 0.05), 0 14px 34px -14px rgba(23, 26, 55, 0.14);
+    --elev-hover: 0 4px 10px rgba(23, 26, 55, 0.07), 0 26px 52px -18px rgba(79, 70, 229, 0.3);
+    --button-text-color: #ffffff;
+
+    /* ---- accents ---- */
+    --pill: #10b981;
+    --badge: #f59e0b;
+
+    /* ---- background glow ---- */
+    --glow-1: rgba(79, 70, 229, 0.16);
+    --glow-2: rgba(168, 85, 247, 0.12);
+    --glow-3: rgba(245, 158, 11, 0.08);
+  }
 
   &[data-theme="dark"] {
-    --primary: #FCC737;
-    --bg-color: #111;
-    --shadow-color: rgb(46, 45, 45);
-    --text-color: #fff;
-    --text-secondary-color: #ccc;
-    --button-text-color: #000;
-    --hover-color: #334155;
-    --badge-bg-color: #111827;
-  }
+    /* ---- signature palette ---- */
+    --primary: #818cf8;      /* periwinkle */
+    --accent: #c084fc;       /* violet */
 
-}
+    /* ---- surfaces ---- */
+    --bg-color: #090b12;
+    --surface-0: #10131d;
+    --surface-1: #171b29;
+    --surface-2: #202538;
+
+    /* ---- lines ---- */
+    --ring-subtle: #222840;
+    --ring: #39405f;
+
+    /* ---- text ---- */
+    --text-color: #f0f2fa;
+    --text-secondary-color: #a6acc4;
+    --text-secondary: #a6acc4;
+    --text-soft: #6d7491;
+
+    /* ---- interactive ---- */
+    --hover-color: #1a1f30;
+    --badge-bg-color: #171b29;
+    --shadow-color: rgba(0, 0, 0, 0.45);
+    --elev: 0 2px 6px rgba(0, 0, 0, 0.35), 0 14px 36px -14px rgba(0, 0, 0, 0.55);
+    --elev-hover: 0 6px 14px rgba(0, 0, 0, 0.4), 0 28px 56px -18px rgba(129, 140, 248, 0.3);
+    --button-text-color: #090b12;
+
+    /* ---- accents ---- */
+    --pill: #34d399;
+    --badge: #fbbf24;
+
+    /* ---- background glow ---- */
+    --glow-1: rgba(129, 140, 248, 0.17);
+    --glow-2: rgba(192, 132, 252, 0.13);
+    --glow-3: rgba(34, 211, 238, 0.09);
+  }
+}

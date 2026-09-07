@@ -1,20 +1,26 @@
+import { MainContext } from "@/context";
 import { ArrowUp } from "lucide-react";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const ScrollToTop = () => {
   const [show, setShow] = useState(false);
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 380) setShow(true);
-    else setShow(false);
-  });
+  const { translations } = useContext(MainContext);
+
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 380);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return show ? (
-    <ArrowUp
-      size={35}
-      color="var(--text-color)"
-      className="fixed left-5 md:left-10 bottom-5 md:bottom-10 rounded-full p-2 border bg-[var(--bg-color)] cursor-pointer"
-      onClick={() => window.scrollTo(0, 0)}
-    />
+    <button
+      aria-label={translations.backToTop}
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="fixed bottom-6 end-6 z-[999] grid h-11 w-11 place-items-center rounded-full bg-gradient-to-tr from-[var(--primary)] to-[var(--accent)] text-white shadow-[0_10px_26px_-8px_var(--primary)] transition-transform"
+    >
+      <ArrowUp size={19} />
+    </button>
   ) : null;
 };
 
-export default ScrollToTop;
+export default ScrollToTop;

@@ -42,7 +42,7 @@ export const adminCopy = {
 		save: "Save",
 		cancel: "Cancel",
 		lock: "Lock",
-		empty: "No projects yet — add the first one.",
+		empty: "No projects yet. Add the first one.",
 		loading: "Loading…",
 		error: "Couldn't reach the database. Try again.",
 		retry: "Retry",

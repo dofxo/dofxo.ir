@@ -7,10 +7,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: var(--bg-color);
-}
-
+/* ---------- base ---------- */
 
 * {
   font-family: "IRANSansX", "tahoma";
@@ -23,41 +20,327 @@ body {
 
   // Enable font feature setting 'ss02' for other browsers
   font-feature-settings: "ss02";
-
-  scroll-behavior: smooth;
-
 }
 
-.container {
-  max-width: 1100px;
-  width: 90vw;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
+}
 
-  @media screen and (max-width:600px) {
-    width: 95vw;
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--button-text-color);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ring);
+  border-radius: 999px;
+  border: 2px solid var(--bg-color);
+
+  &:hover {
+    background: var(--primary);
   }
 }
 
+.container {
+  max-width: 1120px;
+  width: 90vw;
+  margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    width: 94vw;
+  }
+}
+
+/* ---------- typography helpers ---------- */
+
+.font-display {
+  font-family: "SourGummy", "IRANSansX", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.gradient-text {
+  background: linear-gradient(92deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- section title (also used by /vault and /admin) ---------- */
+
 .title {
   font-weight: 800;
-  font-size: 20px;
+  font-size: 22px;
   color: var(--text-color);
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
+  position: relative;
+  width: fit-content;
+  padding-bottom: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    opacity: 0.7;
+  }
 }
 
-.ant-timeline-item-content {
-  inset-block-start: -2.5px !important;
-  margin-inline-start: 20px !important;
+/* ---------- shared component classes ---------- */
+
+/* fixed aurora background glow */
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(560px 380px at 88% -8%, var(--glow-1), transparent 70%),
+    radial-gradient(680px 480px at -8% 108%, var(--glow-2), transparent 70%),
+    radial-gradient(480px 320px at 50% 120%, var(--glow-3), transparent 70%);
 }
 
-.ant-timeline-item-tail {
-  background-color: var(--text-secondary-color) !important;
+/* glassy sticky nav */
+.nav-glass {
+  background-color: var(--bg-color);
+  background-color: color-mix(in srgb, var(--bg-color) 78%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--ring-subtle);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* round icon action button (theme / lang / popover trigger) */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  min-width: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid var(--ring-subtle);
+  background: var(--surface-1);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-1px);
+  }
+}
+
+/* primary gradient button */
+.btn-gradient {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background-size: 160% 160%;
+  box-shadow: 0 8px 24px -8px var(--primary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-position: 100% 50%;
+    box-shadow: 0 12px 30px -8px var(--primary);
+  }
+}
+
+/* outline button */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 14px;
+  border: 1px solid var(--ring);
+  background: var(--surface-0);
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+/* skill chip */
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border-radius: 14px;
+  background: var(--surface-0);
+  border: 1px solid var(--ring-subtle);
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: var(--elev);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: var(--primary);
+    box-shadow: var(--elev-hover);
+  }
+}
+
+/* project tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--ring-subtle);
+  background: var(--surface-1);
+  color: var(--text-secondary);
+  padding: 2.5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+}
+
+/* role pill with pulsing dot */
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--ring-subtle);
+  background: var(--surface-1);
+  color: var(--text-secondary);
+  padding: 2.5px 10px;
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.pulse-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pill);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--pill);
+    animation: pulse-ring 1.6s ease-out infinite;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+/* round icon link (project actions) */
+.icon-action {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--ring-subtle);
+  background: var(--surface-1);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-color: transparent;
+    box-shadow: 0 8px 20px -8px var(--primary);
+  }
+}
+
+/* time badge for timeline */
+.time-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--ring-subtle);
+  background: var(--surface-1);
+  color: var(--primary);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* entrance animation */
+.rise-in {
+  opacity: 0;
+  animation: rise-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* keeps legacy antd timeline overrides from breaking anything else */
 div {
   &[data-radix-popper-content-wrapper] {
     z-index: 10002 !important;
   }
-}
+}

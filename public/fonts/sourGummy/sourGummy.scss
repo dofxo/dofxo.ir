@@ -1,4 +1,8 @@
 @font-face {
   font-family: 'SourGummy';
   src: url('SourGummy-Italic-VariableFont_wdth,wght.ttf')
-}
+  format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

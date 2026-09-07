@@ -1,13 +1,11 @@
-import Title from "../general/Title";
-import ListSkeleton from "../general/ListSkeleton";
-import { Code, GithubIcon } from "lucide-react";
-import Project from "./Project";
-import { Button } from "@/components/ui/button";
-import { AttentionSeeker } from "react-awesome-reveal";
-import { MainContext } from "@/context";
 import { useContext, useEffect, useState } from "react";
+import { Code, Github } from "lucide-react";
+import { MainContext } from "@/context";
 import { fetchProjects } from "@/lib/projects";
 import type { ProjectItem } from "@/types";
+import Title from "../general/Title";
+import ListSkeleton from "../general/ListSkeleton";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   const { lang, translations } = useContext(MainContext);
@@ -32,43 +30,38 @@ const Projects = () => {
   }, []);
 
   return (
-    <section>
-      <div className="container flex flex-col gap-5 items-center">
-        <Title title={translations.project} icon={<Code color="var(--primary)" />} />
-        <div
-          id="projects"
-          className="flex gap-5 flex-wrap justify-center md:justify-start"
-        >
+    <section id="projects" className="scroll-mt-24 py-14 md:py-16">
+      <div className="container flex flex-col items-center gap-12">
+        <Title title={translations.project} icon={<Code size={18} />} />
+
+        <div className="flex w-full max-w-4xl flex-col gap-7">
           {loading ? (
-            <ListSkeleton count={6} />
+            <ListSkeleton count={4} variant="row" />
           ) : (
-            projects.map((project) => (
-              <AttentionSeeker key={project.id} duration={1500} effect="headShake">
-                <Project
-                  title={project.title[lang]}
-                  description={project.description[lang]}
-                  sourceCode={project.sourceCode}
-                  role={project.role}
-                  websiteLink={project.websiteLink}
-                  skills={project.skills}
-                />
-              </AttentionSeeker>
+            projects.map((project, i) => (
+              <div
+                key={project.id}
+                className="rise-in"
+                style={{ animationDelay: `${i * 70}ms` }}
+              >
+                <ProjectCard project={project} lang={lang} index={i} />
+              </div>
             ))
           )}
         </div>
-        <Button variant="outline" asChild className="w-fit rounded-full mt-5">
-          <a
-            href="https://github.com/dofxo/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <GithubIcon color="var(--text-color)" />
-            <span className="text-[var(--text-color)] ">{translations.viewMore}</span>
-          </a>
-        </Button>
+
+        <a
+          href="https://github.com/dofxo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-outline"
+        >
+          <Github size={16} />
+          {translations.viewMore}
+        </a>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default Projects;

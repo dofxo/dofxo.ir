@@ -51,6 +51,10 @@ const App = () => {
 			<LangDirectionSetter />
 			<LangLoader />
 
+			{/* v2 aurora background glow */}
+			<div id="top" />
+			<div className="aurora-bg" aria-hidden="true" />
+
 			<Header />
 
 			<Routes>

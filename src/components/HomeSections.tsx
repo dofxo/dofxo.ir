@@ -5,7 +5,7 @@ import Skills from "./Skills.tsx";
 import { Navigate, useParams } from "react-router-dom";
 
 export const Home = () => (
-	<main className="grid gap-[100px] pb-10">
+	<main className="overflow-hidden">
 		<HeroSection />
 		<Skills />
 		<Experience />
