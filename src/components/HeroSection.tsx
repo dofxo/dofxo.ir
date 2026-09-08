@@ -63,7 +63,11 @@ const HeroSection = () => {
 
           <Fade delay={200} duration={500} triggerOnce>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-              <a href="/resume.pdf" download className="btn-gradient">
+              <a
+                href={lang === "en" ? "/Resume-en.pdf" : "/resume.pdf"}
+                download
+                className="btn-gradient"
+              >
                 <Download size={16} />
                 {translations.downloadResume}
               </a>
