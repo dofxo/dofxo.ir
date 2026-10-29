@@ -5,24 +5,31 @@ import { useContext } from "react";
 import { MainContext } from "@/context";
 
 const Experience = () => {
-  const { translations } = useContext(MainContext);
+  const { translations, lang } = useContext(MainContext);
+
+  // Jalali (fa) vs Gregorian (en) year ranges
+  const times = {
+    saadat: { fa: "1400 - 1396", en: "2017 - 2021" },
+    uni: { fa: "1404 - 1400", en: "2021 - 2025" },
+    webline: { fa: "1403 - 1402", en: "2023 - 2024" },
+  };
 
   const items = [
     {
       title: translations.projects.saadat.title,
-      time: "1400 - 1396",
+      time: times.saadat[lang],
       description: translations.projects.saadat.description,
       place: translations.projects.saadat.place,
     },
     {
       title: translations.projects.uni.title,
-      time: "1404 - 1400",
+      time: times.uni[lang],
       description: translations.projects.uni.description,
       place: translations.projects.uni.place,
     },
     {
       title: translations.projects.webline.title,
-      time: "1403 - 1402",
+      time: times.webline[lang],
       description: translations.projects.webline.description,
       place: translations.projects.webline.place,
     },
