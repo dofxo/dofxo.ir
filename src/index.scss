@@ -22,6 +22,14 @@
   font-feature-settings: "ss02";
 }
 
+/* IRANSansX's 'ss02' set swaps digits for Persian numerals, so turn it off
+   for English so dates and numbers render with Latin digits. */
+html[lang="en"] * {
+  -moz-font-feature-settings: normal;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+}
+
 html {
   scroll-behavior: smooth;
 }
