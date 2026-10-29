@@ -7,6 +7,8 @@
 	"additionalTools": "Additional tools",
 	"aiTools": "AI tools",
 	"experience": "Work and education experience",
+	"workExperience": "Work Experience",
+	"education": "Education",
 	"project": "Projects",
 	"viewMore": "View More",
 	"navSkills": "Skills",
@@ -38,6 +40,11 @@
 			"description": "Computer Engineering",
 			"place": "Islamic Azad University of Bushehr",
 			"title": "Bachelor's Degree"
+		},
+		"master": {
+			"description": "Software Engineering",
+			"place": "Islamic Azad University of Bushehr",
+			"title": "Master's Degree"
 		}
 	}
 }
